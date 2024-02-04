@@ -7,7 +7,9 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
 
     if @user.save
-      @organization = Organization.create(members: [@user])
+      @organization = Organization.create
+
+      Membership.create(user: @user, organization: @organization)
 
       redirect_to root_path,
                   status: :see_other,
