@@ -5,3 +5,12 @@ en:
       sign_up: Sign up!
     create:
       welcome: "Welcome to Piazza, %{name}!"
+  activerecord:
+    errors:
+      models:
+        user:
+          attributes:
+            email:
+              taken: "This email address is already in use."
+            password:
+              too_short: "Password is too short (minimum is 6 characters)."
