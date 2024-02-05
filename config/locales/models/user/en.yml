@@ -14,3 +14,5 @@ en:
               taken: "This email address is already in use."
             password:
               too_short: "Password is too short (minimum is 6 characters)."
+            password_confirmation:
+              confirmation: "Password confirmation doesn't match Password."
