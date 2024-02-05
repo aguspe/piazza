@@ -1,8 +1,8 @@
 require "test_helper"
 
 class FeedControllerTest < ActionDispatch::IntegrationTest
-  test "should get show" do
-    get feed_show_url
-    assert_response :success
+  test "renders feed" do
+    get root_path
+    assert_response :ok
   end
 end
