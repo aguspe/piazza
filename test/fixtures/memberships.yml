@@ -1,0 +1,15 @@
+jerry:
+  user: jerry
+  organization: jerry
+
+kramer:
+  user: kramer
+  organization: kramer
+
+newman:
+  user: newman
+  organization: newman
+
+george:
+  user: george
+  organization: george
