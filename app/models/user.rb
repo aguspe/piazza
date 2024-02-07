@@ -6,6 +6,7 @@ class User < ApplicationRecord
   validates :password_confirmation, presence: true
   has_many :memberships, dependent: :destroy
   has_many :organizations, through: :memberships
+  has_many :app_sessions, dependent: :destroy
   before_validation :strip_name_and_email
 
   private
