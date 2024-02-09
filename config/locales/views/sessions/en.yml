@@ -2,4 +2,7 @@ en:
   sessions:
     new:
       title: "Log In"
-      log_in: "Login"
+      submit: "Login"
+    create:
+      success: "Logged in successfully."
+      failure: "Invalid email or password."
