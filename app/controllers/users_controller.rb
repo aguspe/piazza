@@ -8,6 +8,8 @@ class UsersController < ApplicationController
 
     if @user.save
       @organization = Organization.create
+      @app_session = @user.app_sessions.create
+      log_in(@app_session)
 
       Membership.create(user: @user, organization: @organization)
 
