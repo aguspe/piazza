@@ -8,9 +8,9 @@ class SessionsController < ApplicationController
       log_in(@app_session)
 
       flash[:success] = t(".success")
-      redirect_to root_path
+      redirect_to root_path, status: :see_other
     else
-      flash.now[:alert] = "Invalid email or password"
+      flash.now[:alert] = t(".failure")
       render :new
     end
   end
