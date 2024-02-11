@@ -15,6 +15,12 @@ class User < ApplicationRecord
     user.app_sessions.create if user.authenticate(password)
   end
 
+  def authenticate_app_session(app_session_id, token)
+    app_sessions.find(app_session_id).authenticate(token)
+  rescue ActiveRecord::RecordNotFound
+    nil
+  end
+
   private
 
   def strip_name_and_email
