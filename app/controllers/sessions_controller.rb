@@ -1,4 +1,6 @@
 class SessionsController < ApplicationController
+  skip_authentication only: %i[new create]
+
   def new
   end
 
